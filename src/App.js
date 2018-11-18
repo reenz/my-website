@@ -9,13 +9,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <h3>Software Developer who loves to experiment and challenge herself</h3>
         <Router>
           <div>
-            <Link to='/'>About</Link>
-            <Link to='/experience'>Experience</Link>
-            <Route exact path='/' component={ ()=> <About about={data.about}/>} /> 
-            <Route exact path='/experience' component={ () => <Experience experience={data.experience}/>}/>
+            <div className="NavBar" >
+              <Link to='/'>About</Link>
+              <Link to='/experience'>Experience</Link>
+            </div>
+            <div className="ComponentData" >
+              <Route exact path='/' component={ ()=> <About about={data.about}/>} /> 
+              <Route exact path='/experience' component={ () => <Experience experience={data.experience}/>}/>
+            </div>
           </div>
         </Router>
       </div>
