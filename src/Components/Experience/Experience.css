@@ -1,0 +1,25 @@
+.Container {
+   
+}
+
+.FullExpData {
+    padding: 2%;
+    text-align: left;
+}
+
+.CompanyName {
+    font-weight: 900;
+    padding-bottom: 1%;
+    font-size: 20px;
+}
+
+.duration {
+    font-weight: 500;
+    padding-bottom: 1%;
+}
+
+.descItem {
+    display: list-item;
+    list-style-position: inside;
+    line-height: 1.6;
+}

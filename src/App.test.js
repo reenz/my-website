@@ -3,7 +3,6 @@ import { shallow, mount} from 'enzyme';
 import ReactDOM from 'react-dom';
 import About from './Components/About/About'
 import App from './App';
-import { MemoryRouter } from 'react-router';
 
 
 describe("App", () => {
@@ -14,11 +13,8 @@ describe("App", () => {
   });
 
   it("renders its child component", () => {
-    const wrapper = mount(
-      <MemoryRouter initialEntries={['/']}>
-        <App/>
-      </MemoryRouter>);
-    expect(wrapper.find(About).length).toEqual(1);
+    const wrapper = shallow(<App/>)
+    expect(wrapper.text()).toContain("<About />");
     
   })
 
