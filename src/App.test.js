@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import About from './Components/About/About'
 import App from './App';
-import { shallow} from 'enzyme';
+import { MemoryRouter } from 'react-router';
+import { shallow, mount} from 'enzyme';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 configure ({ adapter: new Adapter()});
@@ -14,8 +16,12 @@ describe("App", () => {
   });
 
   it("renders its child component", () => {
-    const wrapper = shallow(<App/>);
-    expect(wrapper.text()).toContain("<About />")
+    const wrapper = mount(
+      <MemoryRouter initialEntries={['/']}>
+        <App/>
+      </MemoryRouter>);
+    expect(wrapper.find(About).length).toEqual(1);
+    
   })
 
 })
