@@ -1,12 +1,10 @@
 import React from 'react';
+import { shallow, mount} from 'enzyme';
 import ReactDOM from 'react-dom';
 import About from './Components/About/About'
 import App from './App';
 import { MemoryRouter } from 'react-router';
-import { shallow, mount} from 'enzyme';
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-configure ({ adapter: new Adapter()});
+
 
 describe("App", () => {
   it("renders without crashing", () => {
