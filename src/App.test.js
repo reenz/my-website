@@ -15,14 +15,6 @@ describe("App", () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  it("renders its child About component", () => {
-    expect(wrapper.text()).toContain("<About />");
-  })
-
-  it("renders its child Experience component", () => {
-    expect(wrapper.text()).toContain("<Experience />");
-  })
-
   it("renders its child Navigation component", () => {
     expect(wrapper.text()).toContain("<Navigation />");
   })
