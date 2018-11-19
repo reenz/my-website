@@ -12,4 +12,9 @@ describe("About component",() => {
     const wrapper = shallow(<About about="I am Reena Sharma"/>);
     expect(wrapper.text()).toContain("I am Reena Sharma")
   })
+
+  it("renders hero component", () => {
+    const wrapper = shallow(<About/>);
+    expect(wrapper.text()).toContain("<Hero />")
+  })
 })

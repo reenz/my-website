@@ -1,0 +1,17 @@
+.HeroContainer {
+    background-color: antiquewhite;
+    position: relative;
+    height: 320px;
+    width:100%;
+}
+
+.Heading {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 60px;
+    font-weight: bolder;
+}
